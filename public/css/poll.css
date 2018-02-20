@@ -1,0 +1,305 @@
+/****** Main Styling ******/
+
+
+html {
+  min-width: 100%;
+  min-height: 100%;
+  background: url("https://cdn.glitch.com/38e0359d-17f9-4e45-a1e2-f1dd5b87172e%2FVoteNexLogoTransperancyBIG2.png?1518171358033"), linear-gradient(-225deg, #5D9FFF 0%, #B8DCFF 48%, #6BBBFF 100%);
+  background-position: top;  
+  background-size: 400px, cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll, fixed;
+  font-family: 'Courgette', cursive;
+  margin: 0;
+  padding: 0;
+}
+body {
+/*   position: absolute; */
+  min-width: inherit;
+  min-height: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+
+.btn {	/* Styling for buttons */
+	color: inherit;
+	background: linear-gradient(to right, rgba(0, 0, 255, 0.3), rgba(0, 0, 255, 0.7));
+	display: inline-block;
+	border: 0;
+	font-size: 14px;
+	border-bottom-left-radius: 100% 100%;
+  border-bottom-right-radius: 100% 100%;
+  border-top-left-radius: 100% 100%;
+  border-top-right-radius: 100% 100%;
+	padding: 10px 5px;
+	width: 100px;
+	font-weight: 500;
+  font-family: inherit;
+  outline: none;
+  cursor: pointer;
+/*   margin-top: 250px; */
+}
+
+.btn:active {
+ opacity: 0.5; 
+}
+
+.header {
+  position: relative;
+  height: 160px;
+  width: 400px;
+  margin-bottom: 100px;
+  margin-top: -50px;
+}
+
+#home {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 160px;
+  width: inherit;
+}
+
+.content {
+  border: solid;
+  min-height: 80%;
+  width: 80%;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  text-align: center;
+/*   margin-top: 100px; */
+}
+
+.content > div {
+  margin: 10px;
+  cursor: pointer;
+  background-color: white;
+  border-radius: 10px;
+  font-size: 20px;
+}
+
+#title {
+ text-align: center;
+ margin-top: 140px;
+}
+
+#content-title {
+  font-size: 30px; 
+}
+
+.intro-container {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.intro-container .btn:hover { 
+  background-color: grey;
+}
+
+.intro-container .btn:active {
+  background-color: white;
+  
+}
+
+.overlay {
+  position: absolute;
+/*   border: solid; */
+  width: 100%;
+  min-height: 100%;
+  background-color: black;
+  background-size: contain;
+  opacity: 0.5;
+  display: none;
+}
+
+.login-form {
+  position: absolute;
+/*   border: solid; */
+  text-align: center;
+  width: 400px;
+  display: none; 
+  z-index: 1;
+}
+
+.form-input {
+  background: linear-gradient(to right, rgba(0, 0, 255, 0.3), rgba(0, 0, 255, 0.7));
+  border: 0;
+  border-radius: 10px;
+  outline: none;
+  font-family: inherit;
+  text-align: center;
+}
+
+.form-input:focus {
+  background-color: grey;
+}
+
+.register-form {
+  position: absolute;
+  text-align: center;
+  width: 400px;
+  display: none; 
+  z-index: 1;
+}
+
+#title {
+ margin-top: 140px; 
+}
+
+.header {
+ margin-bottom: 20px; 
+  
+}
+
+.poll-buttons-container .btn:hover { 
+  background-color: grey;
+}
+
+#form {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+/*   background-color: rgba(0, 0, 0, 0.3);
+  background-size: cover;
+  background-attachment: fixed; */
+  text-align: center;
+  display: none;
+}
+
+.form-input {
+  color: white;
+  width: 80%;
+}
+
+.center {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  height: auto;
+  width: 40%;
+  margin-left: -20%;
+  background: linear-gradient(-225deg, #5D9FFF 0%, #B8DCFF 48%, #6BBBFF 100%);
+  border-radius: 20px;
+}
+
+.center form {
+ margin: 0 20px 20px; 
+}
+
+.createinput {
+  height: 20px;
+  margin: 5px 0px;
+  color: black;
+  background: white;
+}
+
+.createinput:focus {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+#submit {
+  width: 100px;
+  height: 30px;
+}
+
+#interact-btns {
+  margin: 0;
+  padding: 0;
+}
+
+.create-btn {
+  outline: none;
+  border-radius: 10px;
+  font-family: inherit;
+  background: linear-gradient(-225deg, #5D9FFF 0%, #B8DCFF 48%, #6BBBFF 100%);
+  font-weight: bold;
+}
+
+#x {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.create {
+  position: absolute; 
+}
+
+a {
+ text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: 100vw;
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+}
+
+.poll-container {
+  width: 45%;
+  min-height: 50%;
+  background: rgba(255,255,255, 0.5);
+  border-radius: 10px;
+  text-align: center;
+}
+
+
+#poll {
+  margin-right: 10px;
+}
+
+#chart {
+  margin-left: 10px;
+}
+
+/*Poll buttons */
+label {
+  display: block; 
+/*   padding: 5px;  */
+  position: relative; 
+/*   padding-left: 20px; */
+/*   border: solid; */
+  width: 100%;
+  height: 30px;
+}
+
+label input {
+  display: none;
+}
+
+label span {
+  width: 100%; 
+  height: 30px; 
+  position: absolute; 
+  text-align: center; 
+  border-radius: 45%; 
+  font-size: 25px;
+  left: 50%; 
+  top: 50%; 
+  margin-top: -15px;
+  margin-left: -50%;
+}
+
+input:hover + span {
+  background: rgba(0, 0, 0, 0.3); 
+}
+
+input:checked + span {
+  background: rgba(0, 0, 0, 0.3); 
+/*   border-color: #ccf; */
+}
+
+#submit {
+  border-radius: 10px;
+  font-family: inherit;
+}

@@ -1,0 +1,95 @@
+/****** Main Styling ******/
+
+
+html {
+  width: 100%;
+  height: 100%;
+  background-image: url("https://cdn.glitch.com/38e0359d-17f9-4e45-a1e2-f1dd5b87172e%2FVoteNexLogoTransperancyBIG2.png?1518171358033"), linear-gradient(-225deg, #5D9FFF 0%, #B8DCFF 48%, #6BBBFF 100%);
+  background-position: top;  
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: 'Courgette', cursive;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+/*   position: absolute; */
+  width: inherit;
+  height: inherit;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+
+.btn {	/* Styling for buttons */
+	color: inherit;
+	background: linear-gradient(to right, rgba(0, 0, 255, 0.3), rgba(0, 0, 255, 0.7));
+	display: inline-block;
+	border: 0;
+	font-size: 14px;
+	border-bottom-left-radius: 100% 100%;
+  border-bottom-right-radius: 100% 100%;
+  border-top-left-radius: 100% 100%;
+  border-top-right-radius: 100% 100%;
+	padding: 10px 5px;
+	width: 100px;
+	font-weight: 500;
+  font-family: inherit;
+  outline: none;
+  margin-top: 250px;
+  cursor: pointer;
+}
+
+.intro-container .btn:hover { 
+  background-color: grey;
+}
+
+.intro-container .btn:active {
+  background-color: white;
+}
+
+.overlay {
+  position: absolute;
+/*   border: solid; */
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.5;
+  display: none;
+}
+
+.login-form {
+  position: absolute;
+/*   border: solid; */
+  text-align: center;
+  width: 400px;
+  display: none; 
+  z-index: 1;
+}
+
+.form-input {
+  background: linear-gradient(to right, rgba(0, 0, 255, 0.3), rgba(0, 0, 255, 0.7));
+  border: 0;
+  border-radius: 10px;
+  outline: none;
+  font-family: inherit;
+  text-align: center;
+}
+
+.form-input:focus {
+  background-color: grey;
+}
+
+
+.register-form {
+  position: absolute;
+/*   border: solid; */
+  text-align: center;
+  width: 400px;
+  display: none; 
+  z-index: 1;
+}

@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+		<title>VoteNex - A Voting App - Login.</title>
+		
+    
+    <!--Custom Theme files-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Intro information" />
+    
+    <link id="favicon" rel="icon" href="https://cdn.glitch.com/38e0359d-17f9-4e45-a1e2-f1dd5b87172e%2FVoteNexLogoTransperancyBIG2.png?1518171358033" type="image/x-icon">
+    
+    <link href="/css/guest.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+    
+    <script src="/scripts/guest.js"></script>
+	</head>
+
+	<body>
+    <div class="overlay"></div>
+    
+    <header class="header">
+      <div id="title">Welcome, Guest!</div>
+    
+      <div class="intro-container">
+        <button type="button" class="btn login" onclick="buttonPressed(this)">Login</button>
+        <button type="button" class="btn register" onclick="buttonPressed(this)">Register</button>
+      </div>
+    </header>
+    
+<!--     <div class="poll-buttons-container"> -->
+<!--         <button type="button" class="btn create" onclick="buttonPressed(this)">Create Poll</button>
+        <button type="button" class="btn mypolls" onclick="buttonPressed(this)">My Polls</button> -->
+<!--         <button type="button" class="btn allpolls" onclick="buttonPressed(this)">All Polls</button> -->
+<!--     </div> -->
+    <div id="content-title">
+       Available Polls
+    </div>
+    <div id="content" class="content">
+      
+    </div>
+    
+    <div class="login-form btn">
+          <h3>Login</h3>
+          <div class="form">
+            <form action="/" method="post">
+              <input class="form-input" type="text" name="logemail" placeholder="E-mail" required="">
+              <input class="form-input" type="password" name="logpassword" placeholder="Password" required="">
+              <div>
+                <button class="form-input" type="submit">Log in</button>
+              </div>
+            </form>
+      </div>
+    </div>
+    
+      <div class="register-form btn">
+          <h3>Register</h3>
+          <div class="form">
+            <form action="/" method="post">
+              <input class="form-input"  type="text" name="email" placeholder="E-mail" required="">
+              <input class="form-input"  type="text" name="username" placeholder="Username" required="">
+              <input class="form-input"  type="password" name="password" placeholder="Password" required="">
+              <input class="form-input"  type="password" name="passwordConf" placeholder="Confirm Password" required="">
+              <div>
+                <input class="form-input" style="height: 20px;" type="submit" value="REGISTER">
+              </div>
+            </form>
+            <p><a href="#"> By clicking register, I agree to your terms</a></p>
+         </div>
+      </div>
+      <div class="clear"></div>
+	</body>
+  
+</html>

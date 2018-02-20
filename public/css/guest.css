@@ -1,0 +1,141 @@
+/****** Main Styling ******/
+
+
+html {
+  min-width: 100%;
+  min-height: 100%;
+  background: url("https://cdn.glitch.com/38e0359d-17f9-4e45-a1e2-f1dd5b87172e%2FVoteNexLogoTransperancyBIG2.png?1518171358033"), linear-gradient(-225deg, #5D9FFF 0%, #B8DCFF 48%, #6BBBFF 100%);
+  background-position: top;  
+  background-size: 400px, cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll, fixed;
+  font-family: 'Courgette', cursive;
+  margin: 0;
+  padding: 0;
+}
+body {
+/*   position: absolute; */
+  min-width: inherit;
+  min-height: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+
+.btn {	/* Styling for buttons */
+	color: inherit;
+	background: linear-gradient(to right, rgba(0, 0, 255, 0.3), rgba(0, 0, 255, 0.7));
+	display: inline-block;
+	border: 0;
+	font-size: 14px;
+	border-bottom-left-radius: 100% 100%;
+  border-bottom-right-radius: 100% 100%;
+  border-top-left-radius: 100% 100%;
+  border-top-right-radius: 100% 100%;
+	padding: 10px 5px;
+	width: 100px;
+	font-weight: 500;
+  font-family: inherit;
+  outline: none;
+  cursor: pointer;
+/*   margin-top: 250px; */
+}
+
+.btn:active {
+ opacity: 0.5; 
+}
+
+.header {
+/*   border: solid; */
+  height: 160px;
+  width: 400px;
+  margin-bottom: 100px;
+}
+
+.content {
+  border: solid;
+  min-height: 80%;
+  width: 80%;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  text-align: center;
+/*   margin-top: 100px; */
+}
+
+.content > div {
+  margin: 10px;
+  cursor: pointer;
+  background-color: white;
+  border-radius: 10px;
+  font-size: 20px;
+}
+
+#title {
+ text-align: center;
+ margin-top: 150px;
+}
+
+#content-title {
+  font-size: 30px; 
+}
+
+.intro-container {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.intro-container .btn:hover { 
+  background-color: grey;
+}
+
+.intro-container .btn:active {
+  background-color: white;
+  
+}
+
+.overlay {
+  position: absolute;
+/*   border: solid; */
+  width: 100%;
+  min-height: 100%;
+  background-color: black;
+  background-size: contain;
+  opacity: 0.5;
+  display: none;
+}
+
+.login-form {
+  position: absolute;
+/*   border: solid; */
+  text-align: center;
+  width: 400px;
+  display: none; 
+  z-index: 1;
+}
+
+.form-input {
+  background: linear-gradient(to right, rgba(0, 0, 255, 0.3), rgba(0, 0, 255, 0.7));
+  border: 0;
+  border-radius: 10px;
+  outline: none;
+  font-family: inherit;
+  text-align: center;
+}
+
+.form-input:focus {
+  background-color: grey;
+}
+
+.register-form {
+  position: absolute;
+  text-align: center;
+  width: 400px;
+  display: none; 
+  z-index: 1;
+}
+

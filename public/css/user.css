@@ -1,0 +1,82 @@
+#title {
+ margin-top: 140px; 
+}
+
+.header {
+ margin-bottom: 20px; 
+  
+}
+
+.poll-buttons-container .btn:hover { 
+  background-color: grey;
+}
+
+#form {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  text-align: center;
+  display: none;
+}
+
+.form-input {
+  color: white;
+  width: 80%;
+}
+
+.center {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  height: auto;
+  width: 40%;
+  margin-left: -20%;
+  background: linear-gradient(-225deg, #5D9FFF 0%, #B8DCFF 48%, #6BBBFF 100%);
+  border-radius: 20px;
+}
+
+.center form {
+ margin: 0 20px 20px; 
+}
+
+.createinput {
+  height: 20px;
+  margin: 5px 0px;
+  color: black;
+  background: white;
+}
+
+.createinput:focus {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+#submit {
+  width: 100px;
+  height: 30px;
+}
+
+#interact-btns {
+  margin: 0;
+  padding: 0;
+}
+
+.create-btn {
+  outline: none;
+  border-radius: 10px;
+  font-family: inherit;
+  background: linear-gradient(-225deg, #5D9FFF 0%, #B8DCFF 48%, #6BBBFF 100%);
+  font-weight: bold;
+}
+
+#x {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+a {
+ text-decoration: none;
+  color: inherit;
+}
