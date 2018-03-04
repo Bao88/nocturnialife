@@ -3,6 +3,7 @@ var express = require('express');
 var router = express.Router();
 var User = require('../models/user');
 var Poll = require("../models/poll");
+const request = require("request");
 
 // GET route for reading data
 router.get('/', function (req, res, next) {
@@ -67,36 +68,27 @@ router.post('/', function (req, res, next) {
 //POST Creating a new poll and store it in database
 router.post('/search', function (req, res, next) {
   var user; 
-  console.log(req.body);
-  res.status(200);
-  res.type("json").send({ok:"ok"});
-  // User.findById(req.session.userId).exec(function (error, user) {
-  //   if (error) return next(error);
-  //   else {
-  //     //create the data
-  //     console.log(req.body[1]);
-  //     user = user.username;
-  //     var array = [];
-  //     for(var i = 0; i < req.body[1].length;i++) array[i] = 0;
-  //     var pollData = {
-  //       username: user,
-  //       poll: req.body,
-  //       votes: array,
-  //       voted: []
-  //     };
-      
-  //     // store the data in database       
-  //     Poll.create(pollData, function (error, user) {
-  //       if (error) {
-  //         console.log(error);
-  //         return next(error);
-  //       } else {
-  //         // req.session.userId = user._id;
-  //         return res.redirect('/');
-  //       }
-  //     });
-  //   }
-  // });
+  // console.log(process.env.CLIENTID);
+  let currentDate = new Date().toISOString().split("T")[0].replace(/-/g, "");
+  request({
+    url: "https://api.foursquare.com/v2/venues/explore",
+    method: "GET",
+    qs: {
+      client_id: process.env.CLIENTID,
+      client_secret: process.env.CLIENTSECRET,
+      near: req.body.search,
+      query: "bar",
+      venuePhotos: 1,
+      v: currentDate,
+      limit: 10
+    }
+  }, function ( err, innerres, body){
+    if(err) console.error(err);
+    else {
+      res.status(200);
+      res.type("json").send(body);
+    }
+  });
 });
 
 

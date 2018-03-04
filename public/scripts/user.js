@@ -1,6 +1,4 @@
-var overlay, submit, containerBtns;
-var cacheMyData = null;
-var cacheAllData = null;
+
 
 window.onload = function(){
 //   Submit form to server
@@ -22,10 +20,18 @@ window.onload = function(){
       if(response.status === 500){
         alert("Searching failed!");
       } else {
-        alert(response.ok);
+        console.log("Create search results and show them");
+        createResults(response.response.groups[0].items);
       }
     }).catch(function(error) {
         console.log("error" + error);
     });
+    this.reset();
   });
+}
+
+// Create new objects of the results received from server and
+// insert those into the DOM
+function createResults(results){
+  console.log(results);
 }

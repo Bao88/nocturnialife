@@ -2,13 +2,13 @@
   "//1": "describes your app and its dependencies",
   "//2": "https://docs.npmjs.com/files/package.json",
   "//3": "updating this file will download and update your packages",
-  "name": "my-glitch-app",
+  "name": "Nightlife App",
   "version": "0.0.1",
-  "description": "What am I about?",
+  "description": "Find the nearest bar for partying",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "serve": "node server.js webpack-dev-server"
+    "serve": "nodemon server.js"
   },
   "dependencies": {
     "bcrypt": "^1.0.3",
