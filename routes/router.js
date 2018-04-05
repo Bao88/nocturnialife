@@ -2,8 +2,10 @@
 var express = require('express');
 var router = express.Router();
 var User = require('../models/user');
-var Poll = require("../models/poll");
+const Userplan = require("../models/userplan");
+
 const request = require("request");
+
 
 // GET route for reading data
 router.get('/', function (req, res, next) {
@@ -16,7 +18,7 @@ router.get("/guest/", function (req, res, next) {
  return res.sendFile("views/guest.html", {"root": "."}); 
 });
 
-//POST route for updating data
+//POST route for either creating a new user or authenticate a user
 router.post('/', function (req, res, next) {
   // confirm that user typed same password twice
   if (req.body.password !== req.body.passwordConf) {
@@ -65,52 +67,42 @@ router.post('/', function (req, res, next) {
   }
 })
 
-//POST Creating a new poll and store it in database
-router.post('/search', function (req, res, next) {
-  var user; 
-  // console.log(process.env.CLIENTID);
+router.post("/search", function ( req, res, next ) {
+  let location = req.body.location;
   let currentDate = new Date().toISOString().split("T")[0].replace(/-/g, "");
+  // console.log("testing");
+  // console.log(req.body);
+  
   request({
     url: "https://api.foursquare.com/v2/venues/explore",
     method: "GET",
     qs: {
-      client_id: process.env.CLIENTID,
+      client_id: process.env.ClIENTID,
       client_secret: process.env.CLIENTSECRET,
-      near: req.body.search,
+      near: location,
       query: "bar",
-      venuePhotos: 1,
       v: currentDate,
-      limit: 10
+      limit: 10,
+      venuePhotos: 1
     }
-  }, function ( err, innerres, body){
-    if(err) console.error(err);
-    else {
+  }, function ( err, innerres, body ) {
+    if(err){
+      res.status(201);
+      res.type("json").send({err: "Error requesting data from foursquare"});
+    } else {
+      console.log(JSON.parse(body).response);
+      
+      
+      
       res.status(200);
       res.type("json").send(body);
     }
   });
+    
+
 });
 
-
-// GET route after registering
-router.get('/profile', function (req, res, next) {
-  User.findById(req.session.userId)
-    .exec(function (error, user) {
-      if (error) {
-        return next(error);
-      } else {
-        if (user === null) {
-          var err = new Error('Not authorized! Go back!');
-          err.status = 400;
-          return next(err);
-        } else {
-          return res.send('<h1>Name: </h1>' + user.username + '<h2>Mail: </h2>' + user.email + '<br><a type="button" href="/logout">Logout</a>')
-        }
-      }
-    });
-});
-
-// GET for logout logout
+// GET for logout 
 router.get('/logout', function (req, res, next) {
   if (req.session) {
     // delete session object

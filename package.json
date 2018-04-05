@@ -2,22 +2,22 @@
   "//1": "describes your app and its dependencies",
   "//2": "https://docs.npmjs.com/files/package.json",
   "//3": "updating this file will download and update your packages",
-  "name": "Nightlife App",
+  "name": "my-glitch-app",
   "version": "0.0.1",
-  "description": "Find the nearest bar for partying",
+  "description": "What am I about?",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "serve": "nodemon server.js"
+    "start": "node server.js"
   },
   "dependencies": {
-    "bcrypt": "^1.0.3",
-    "body-parser": "^1.18.2",
-    "connect-mongo": "^2.0.1",
-    "dotenv": "^5.0.0",
     "express": "^4.16.2",
+    "body-parser": "^1.18.2",
+    "nodemon": "^1.14.12",
+    "mongoose": "^5.0.3",
+    "bcrypt": "^1.0.3",
     "express-session": "^1.15.6",
-    "mongoose": "^5.0.3"
+    "connect-mongo": "^2.0.1",
+    "request": "^2.83.0"
   },
   "engines": {
     "node": "8.x"
@@ -30,8 +30,5 @@
     "node",
     "glitch",
     "express"
-  ],
-  "devDependencies": {
-    "webpack-dev-server": "^3.1.0"
-  }
+  ]
 }
